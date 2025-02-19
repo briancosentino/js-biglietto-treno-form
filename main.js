@@ -46,5 +46,5 @@ formEl.addEventListener('submit', (e)=>{
     ticketLastName.innerText = lastNameEl.value
     ticketAge.innerText = ageEl.value
     ticketKm.innerText = kmEl.value
-    ticketPrice.innerText = price
+    ticketPrice.innerText = price + ' €'
 })
