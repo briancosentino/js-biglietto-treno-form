@@ -12,25 +12,39 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
  */
+/* form element */
 const formEl = document.querySelector('form')
 const kmEl = document.querySelector('#km')
 const ageEl = document.querySelector ('#age')
-console.log(kmEl, ageEl.value, formEl);
+const nameEl = document.querySelector ('#name')
+const lastNameEl = document.querySelector ('#lastName')
+/* ticket element */
+const ticketName = document.querySelector('.passenger-name')
+const ticketLastName = document.querySelector('.passenger-surname')
+const ticketAge = document.querySelector('.passenger-age')
+const ticketKm = document.querySelector('.passenger-km')
+const ticketPrice = document.querySelector('.passenger-price')
 
 formEl.addEventListener('submit', (e)=>{
     e.preventDefault()
     let price = kmEl.value * 0.21
-   
+    
+    
     if(ageEl.value === 'minorenne'){
         price -= (price * 20 /100).toFixed(2)
-        console.log(price);
         
-
+        
+        
     } else if(ageEl.value === 'overAge'){
         price -= (price * 40 / 100).toFixed(2)
-
+        
     } else{
         price = price.toFixed(2)
-
+        
     }
+    ticketName.innerText = nameEl.value
+    ticketLastName.innerText = lastNameEl.value
+    ticketAge.innerText = ageEl.value
+    ticketKm.innerText = kmEl.value
+    ticketPrice.innerText = price
 })
