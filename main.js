@@ -12,3 +12,23 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
  */
+const formEl = document.querySelector('form')
+const kmEl = document.querySelector('.km')
+const ageEl = document.querySelector ('#age')
+console.log(kmEl, ageEl.value, formEl);
+
+formEl.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    let price = kmEl.value * 0.21
+   
+    if(ageEl.value === 'minorenne'){
+        price -= (price * 20 /100).toFixed(2)
+
+    } else if(ageEl.value === 'overAge'){
+        price -= (price * 40 / 100).toFixed(2)
+
+    } else{
+        price = price.toFixed(2)
+
+    }
+})

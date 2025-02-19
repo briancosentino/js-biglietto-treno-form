@@ -7,12 +7,43 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="card">
+        <div class="card-header">
+            <p>Train ticket</p>
+        </div>
+        <div class="content-wrapper">
+            <div class="ticket-box w-50">
+                <div class="label">Nome</div>
+                <div class="passenger-name">Lorem</div>
+
+            </div>
+            <div class="ticket-box w-50">
+                <div class="label">Cognome</div>
+                <div class="passenger-surname">Lorem</div>
+            </div>
+            <div class="ticket-box">
+                <div class="label">Età</div>
+                <div class="passenger-age">Lorem</div>
+            </div>
+            <div class="ticket-box">
+                <div class="label">Km</div>
+                <div class="passenger-km">Lorem</div>
+            </div>
+            <div class="ticket-box">
+                <div class="label">Prezzo</div>
+                <div class="passenger-price">Lorem</div>
+            </div>
+        </div>
+        <div class="card-footer"></div>
+    </div>
     <form action="">
         <select name="age" id="age">
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="minorenne">Minorenne</option>
+            <option value="" disabled selected>Seleziona la tua età</option>
+            <option value="minorenne">0 - 17</option>
+            <option value="maggiorenne">18 - 64</option>
+            <option value="overAge">65+</option>
         </select>
-        <input type="number" class="number">
+        <input type="number" class="km">
         <button type="submit">Invia</button>
     </form>
     <script src="main.js"></script>
