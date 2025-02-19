@@ -13,7 +13,7 @@ MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
  */
 const formEl = document.querySelector('form')
-const kmEl = document.querySelector('.km')
+const kmEl = document.querySelector('#km')
 const ageEl = document.querySelector ('#age')
 console.log(kmEl, ageEl.value, formEl);
 
@@ -23,6 +23,8 @@ formEl.addEventListener('submit', (e)=>{
    
     if(ageEl.value === 'minorenne'){
         price -= (price * 20 /100).toFixed(2)
+        console.log(price);
+        
 
     } else if(ageEl.value === 'overAge'){
         price -= (price * 40 / 100).toFixed(2)

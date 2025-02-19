@@ -36,16 +36,26 @@
         </div>
         <div class="card-footer"></div>
     </div>
-    <form action="">
-        <select name="age" id="age">
-            <option value="" disabled selected>Seleziona la tua età</option>
-            <option value="minorenne">0 - 17</option>
-            <option value="maggiorenne">18 - 64</option>
-            <option value="overAge">65+</option>
-        </select>
-        <input type="number" class="km">
-        <button type="submit">Invia</button>
-    </form>
+    <div class="form-wrapper">
+        <form action="">
+            
+            
+            <input type="text" id="name" placeholder="Inserisci il tuo nome">
+            
+            <input type="text" id="lastName" placeholder="Inserisci il tuo cognome">
+            
+            <input type="number" id="km" placeholder="Inserisci il numero di Km">
+           
+            <select name="age" id="age">
+                <option value="" disabled selected>Seleziona la tua età</option>
+                <option value="minorenne">0 - 17</option>
+                <option value="maggiorenne">18 - 64</option>
+                <option value="overAge">65+</option>
+            </select>
+            <button type="submit">Invia</button>
+        </form>
+
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
